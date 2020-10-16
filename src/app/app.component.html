@@ -1,0 +1,36 @@
+<h1 class="center">Coin Flip</h1>
+
+<div class="center">
+	<h2>Play, for a chance to double your bet!</h2>
+
+	<div class="p-grid">
+		<div class="p-col">
+			<div class="p-field-radiobutton">
+				<p-radioButton name="headsTails" value="true" [(ngModel)]="heads" inputId="heads"></p-radioButton>
+				<label for="heads">Heads</label>
+			</div>
+
+			<div class="p-field-radiobutton">
+				<p-radioButton name="headsTails" value="false" [(ngModel)]="heads" inputId="tails"></p-radioButton>
+				<label for="tails">Tails</label>
+			</div>
+
+			<br>
+
+			<span class="p-float-label">
+    		<input id="amount" type="text" pInputText [(ngModel)]="amount">
+				<label for="amount">Amount</label>
+			</span>
+		</div>
+
+		<div class="p-col" style="border-style: dashed; border-color: {{borderColor}}">
+			<h3>Results: {{result}}</h3>
+		</div>
+	</div>
+
+	<br>
+	<button pButton type="button" label="Play" (click)="play()" style="float: right;"></button>
+	<br><br><br>
+</div>
+
+<router-outlet></router-outlet>
